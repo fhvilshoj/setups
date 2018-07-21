@@ -1,0 +1,2 @@
+#!/bin/sh
+echo `ruby /home/fhv/.xmonad/bin/scripts/monitors.rb $@`

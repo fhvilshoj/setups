@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo "Disabling fns"
+echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
+
+echo "Setting up monitors"
+
+if [ -z "$1" ]
+  then
+    echo "Guess were at home :-)"
+    /home/fhv/.xmonad/bin/scripts/ext-disp -p left-of
+else
+    echo "At the office"
+    /home/fhv/.xmonad/bin/scripts/ext-disp -a office
+fi
+
+echo "Setting american keyboard"
+/home/fhv/.xmonad/bin/keyboard us

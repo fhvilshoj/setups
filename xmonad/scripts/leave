@@ -1,0 +1,3 @@
+#Turning off external displays
+echo `ruby /home/fhv/.xmonad/bin/scripts/turn-off-monitors.rb`
+
