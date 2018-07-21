@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: illustrate
+# key: ilc
+# --
+\begin{center}
+  \illustrate{${1}}{${2}}
+\end{center}
+$0

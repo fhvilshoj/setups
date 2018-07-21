@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: subtitle
+# key: subt
+# --
+\fhsubtitle{$0}

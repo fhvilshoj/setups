@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: InlineCode
+# key: ic
+# --
+\texttt{${1}}$0
