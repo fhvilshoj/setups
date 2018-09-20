@@ -1,0 +1,32 @@
+Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 90
+       , commands = [ Run Weather "LJLJ" ["-t"," C","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Network "wlan1" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: %"] 10
+                    , Run Swap [] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+		    , Run Battery        [ "--template" , "Batt: <acstatus>"
+                             , "--Low"      , "10"        -- units: %
+                             , "--High"     , "80"        -- units: %
+                             , "--low"      , "darkred"
+                             , "--normal"   , "darkorange"
+                             , "--high"     , "darkgreen"
+
+                             , "--" -- battery specific options
+                                       -- discharging status
+                                       , "-o"	      , "<left>% (<timeleft>)"
+                                       -- AC "on" status
+                                       , "-O"	  , "<fc=#dAA520>Charging</fc>"
+                                       -- charged status
+                                       , "-i"	  , "<fc=#006000>Charged</fc>"
+                             ] 50
+                    , Run StdinReader
+                    , Run CommandReader "/usr/bin/ledmon" "LED"
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %LED% %cpu% | %battery% | %memory% * %swap% | %wlan1%   %date% | %LJLJ%"
+       }
