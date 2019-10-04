@@ -11,6 +11,9 @@ When setup, the next thing to do is to start the Cisco VPN client:
 
 Then there should pop open a window, where the flow is as follows:
 
-![Enter remote `remote.au.dk`](./imgs/first.png)
+![Initial screen](./imgs/first.png)
+Enter remote `remote.au.dk`
 
-![Sign in with Au credentials: `au[0-9]{6}@uni.au.dk`](./imgs/second.png)
+![Type in credentials](./imgs/second.png)
+Sign in to with Au credentials: `au[0-9]{6}@uni.au.dk`
+
