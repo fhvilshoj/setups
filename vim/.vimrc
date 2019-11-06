@@ -35,8 +35,8 @@ set incsearch		" do incremental searching
 map Q gq
 
 
+set hlsearch
 set relativenumber
-" colorscheme rupza
 set autoindent
 set smartindent
 set nocompatible
@@ -44,7 +44,6 @@ set backupdir=./.backup,.,/tmp
 set directory=.,./.backup,/tmp
 set mouse-=a
 
-set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
@@ -55,4 +54,15 @@ nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
+
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
+nnoremap <silent> [a :previous<CR>
+nnoremap <silent> ]a :next<CR>
+nnoremap <silent> [A :first<CR>
+nnoremap <silent> ]A :last<CR>
+
 
