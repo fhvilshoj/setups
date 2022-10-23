@@ -18,7 +18,7 @@ require('opts')      -- Options
 require('keys')      -- Keymaps
 require('plug')      -- Plugins
 
--- PLUGINS: Add this section
+-- PLUGINS: TODO Add this section
 -- require('plugins')
 
 require('nvim-tree').setup{}
@@ -63,4 +63,13 @@ require('neogen').setup({
         }
     }
 })
+
+require("lsp-colors").setup({
+  Error = "#db4b4b",
+  Warning = "#e0af68",
+  Information = "#0db9d7",
+  Hint = "#10B981"
+})
+
+require('telescope').load_extension('fzf')
 

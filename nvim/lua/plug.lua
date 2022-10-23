@@ -40,6 +40,14 @@ return require('packer').startup(
             requires = "nvim-treesitter/nvim-treesitter",
         }
 
+        -- [[ Search ]]
+        use {
+          'nvim-telescope/telescope.nvim', tag = '0.1.0',
+          requires = { {'nvim-lua/plenary.nvim'} }
+        }
+        use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+
         -- [[ Theme ]]
         use { 'mhinz/vim-startify' }                       -- start screen
         use {
@@ -51,8 +59,8 @@ return require('packer').startup(
         }
 
         -- [[ Colors ]]
-        use { 'Mofiqul/dracula.nvim' }
-        -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+        use 'Mofiqul/dracula.nvim'
+        use 'folke/lsp-colors.nvim'
     end
 )
 
